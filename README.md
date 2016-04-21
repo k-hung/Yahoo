@@ -1,4 +1,4 @@
-# FlaskApp2
+# YahooWebApp - built with Flask.
 This is another version of our FeelsApp with an updated and more modular structure of the app.
 
 Also, this app was created with flask via virtualenv following tutorials created by [Lalith Polepeddi](https://github.com/lpolepeddi) before being modified. - *P.s: Thanks Lalith!*
