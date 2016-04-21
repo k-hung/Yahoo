@@ -53,3 +53,4 @@ To have run the page on your localhost, cd into the `YahooApp` folder, and in yo
 ```sh
 $ python runserver.py
 ```
+If all is well and running, you should be able to find your app running at localhost:5000/ in your browser.
