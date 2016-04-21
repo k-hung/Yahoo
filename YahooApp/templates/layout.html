@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yahoo!</title>
+    <link rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href='http://getbootstrap.com/dist/css/bootstrap.css') }}>
+    <link rel="stylesheet" href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css') }}>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.js'></script>
+    <script type=text/javascript src="{{url_for('static', filename='js/sideBarControl.js') }}"></script>
+    <script>
+      $('li > a').click(function() {
+        $('li').removeClass();
+        $(this).parent().addClass('active');
+      });
+    </script>
+  </head>
+  <body>
+<header>
+    <nav class="menuBar">
+        <nav class="menuOptions">
+              <ul>
+                <li>
+                  <a class='expandable' href='#' title='Account'>
+                    <span class='glyphicon glyphicon-user'></span>
+                    <span class='expanded-element'><b>Account</b></span>
+                  </a>
+                </li>
+                <li>
+                  <a class='expandable' href='#' title='Mail'>
+                    <span class='glyphicon glyphicon-envelope'></span>
+                    <span class='expanded-element'></span>
+                  </a>
+                </li>
+                <li>
+                  <a class='expandable' href='#' title='Notification'>
+                    <span class='glyphicon glyphicon-bell'></span>
+                    <span class='expanded-element'></span>
+                  </a>
+                </li>
+              </ul>
+        </nav>
+      </nav>
+      <nav class='sidebar sidebar-menu-collapsed'>
+        <a href='#' id='justify-icon'>
+          <span class='glyphicon glyphicon-menu-hamburger'></span>
+        </a>
+        <ul>
+          <li>
+            <h1>
+            <a class='expandable' href="{{ url_for('home') }}" title='Yahoo!'>
+              <span class='glyphicon glyphicon-home collapsed-element'></span>
+              <span class='expanded-element'>Yahoo!</span>
+            </a>
+          </h1>
+          </li>
+          <li>
+            <a class='expandable' href="{{ url_for('search') }}" title='Search'>
+              <span class='glyphicon glyphicon-search collapsed-element'></span>
+              <span class='expanded-element'>Search</span>
+            </a>
+          </li>
+          <li>
+            <a class='expandable' href='#' title='News'>
+              <span class='glyphicon glyphicon-list-alt collapsed-element'></span>
+              <span class='expanded-element'>News</span>
+            </a>
+          </li>
+          <li>
+            <a class='expandable' href='#' title='Sports'>
+              <span class='glyphicon glyphicon-bullhorn collapsed-element'></span>
+              <span class='expanded-element'>Sports</span>
+            </a>
+          </li>
+          <li>
+            <a class='expandable' href='#' title='Forecast'>
+              <span class='glyphicon glyphicon-cloud collapsed-element'></span>
+              <span class='expanded-element'>Forecast</span>
+            </a>
+          </li>
+        </ul>
+        <!--End of Sidebar items-->
+        <a href='#' id='cog-icon' title='Settings'>
+              <span class='glyphicon glyphicon-cog'></span>
+        </a>
+      </nav>
+</header>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
