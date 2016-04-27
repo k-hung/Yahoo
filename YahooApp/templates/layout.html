@@ -6,8 +6,10 @@
     <link rel="stylesheet" href='http://getbootstrap.com/dist/css/bootstrap.css') }}>
     <link rel="stylesheet" href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css') }}>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.js'></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'/>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.12.0.js'></script>
     <script type=text/javascript src="{{url_for('static', filename='js/sideBarControl.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='js/search.js') }}"></script>
     <script>
       $('li > a').click(function() {
         $('li').removeClass();
@@ -55,12 +57,6 @@
           </h1>
           </li>
           <li>
-            <a class='expandable' href="{{ url_for('search') }}" title='Search'>
-              <span class='glyphicon glyphicon-search collapsed-element'></span>
-              <span class='expanded-element'>Search</span>
-            </a>
-          </li>
-          <li>
             <a class='expandable' href='#' title='News'>
               <span class='glyphicon glyphicon-list-alt collapsed-element'></span>
               <span class='expanded-element'>News</span>
@@ -86,6 +82,17 @@
       </nav>
 </header>
     <div class="content">
+      <div class="jumbo">
+        <div>
+          <form method="get" action="http://search.yahoo.com/search;_ylt=A0oG7l7PeB5P3G0AKASl87UF?p=<search>">
+            <div class="srch-wrapper">
+              <input type="text" class="srch-input" name="search" placeholder="Would you like me to Google that?" />
+              <button class="srch-button" type="submit">
+              <span class='glyphicon glyphicon-search'></span>
+              </button>
+            </div>
+          </form>
+        </div>
       {% block content %}
       {% endblock %}
     </div>
