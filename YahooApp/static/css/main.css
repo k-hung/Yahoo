@@ -63,7 +63,6 @@ nav.sidebar-menu-collapsed {
 nav.sidebar-menu-expanded {
   width: 260px;
 }
-
 nav.sidebar {
   position: fixed;
   top: 0px;
@@ -124,16 +123,17 @@ nav.sidebar ul li.active a.expandable:hover {
 
 
 .logo{
-  position: relative;
-  margin-left: 500px;
-  width: 40%;
-  padding:50px;
+  position: relative;;
+  margin-left:25%;
+  width: 500px;
+  height: 300px;
 }
 
 .srch-bar{
   position: relative;
+  margin-bottom: 500px;
   width: auto;
-  height: 100%;
+  height: auto;
 }
 
 .srch-bar.close{
@@ -202,14 +202,14 @@ nav.sidebar ul li.active a.expandable:hover {
 .newsframe1 {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
-  float: left;;
+  float: center;;
   overflow: hidden;
   margin: 10px;
-  min-width: 400px;
-  max-width: 1090px;
-  min-height: 400px;
-  max-height: 400px;
-  width: 100%;
+  min-width: 300px;
+  max-width: 1000px;
+  min-height: 300px;
+  max-height: 450px;
+  width: auto;
   height: 100%;
   background: #2D1152;
   text-align: left;
@@ -227,7 +227,7 @@ nav.sidebar ul li.active a.expandable:hover {
 .newsframe1 .image img {
   -webkit-transform: scale(2.40);
   transform: scale(2.40);
-  max-width: 150%;
+  max-width: auto%;
   max-height: 250%;
 }
 .newsframe1 > img {
