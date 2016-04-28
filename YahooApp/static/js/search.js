@@ -1,8 +1,8 @@
-$(function() {
-  $('.srch-button').hover(function(){
-    var $wrapper = $('.srch-wrapper'),
-        isOpen = $wrapper.hasClass('open');
-    $wrapper.toggleClass('open')
+
+$(window).scroll(function(){
+  var $searchbar = $('.srch-bar').height();
+  if($(this).scrollTop() == $searchbar){
+    window.scrollTo(0, 500);
     return false;
-  });
-})
+    };
+});

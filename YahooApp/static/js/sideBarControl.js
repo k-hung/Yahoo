@@ -15,10 +15,10 @@
     };
     expandContent = function() {
       return $(".jumbo").removeClass("jumbo-sidebar-collapsed").addClass("jumbo-sidebar-expanded");
-    }
+    };
     collapseContent = function(){
       return $(".jumbo").removeClass("jumbo-sidebar-expanded").addClass("jumbo-sidebar-collapsed");
-    }
+    };
     return $("#justify-icon").click(function(e) {
       if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-collapsed")) {
         expandMyMenu();

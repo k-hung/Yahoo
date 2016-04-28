@@ -1,0 +1,28 @@
+(function() {
+  $(function() {
+    var expandSearchWrapper, collapseSearchWrapper, expandSearchBar, collapseSearchBar, testScroll
+
+    expandSearchWrapper = function(){
+    return $('.srch-wrapper').hasClass('open');
+    };
+    collapseSearchWrapper = function(){
+      return $('.srch-wrapper').removeClass('open');
+    };
+    expandSearchBar = function(){
+      expandSearchWrapper();
+      return $('.srch-bar').hasClass('open');
+    };
+    collapseSearchBar = function(){
+      collapseSearchWrapper();
+      return $('.srch-bar').removeClass('open');
+    };
+    testScroll = function(){
+      if(window.pageYOffset>200){
+        collapseSearchBar();
+      }
+      else {
+        expandSearchBar();
+      }
+    }
+  });
+});
